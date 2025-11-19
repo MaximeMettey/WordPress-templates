@@ -219,16 +219,6 @@ function restaurant_premium_scripts() {
 add_action( 'wp_enqueue_scripts', 'restaurant_premium_scripts' );
 
 /**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function restaurant_premium_pingback_header() {
-    if ( is_singular() && pings_open() ) {
-        printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-    }
-}
-add_action( 'wp_head', 'restaurant_premium_pingback_header' );
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
