@@ -1,0 +1,44 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#2c2c2c"/>
+
+  <!-- Header -->
+  <rect width="1200" height="80" fill="#1a1a1a"/>
+  <text x="50" y="50" font-family="Georgia, serif" font-size="32" fill="#d4af37" font-weight="bold">Restaurant Premium</text>
+
+  <!-- Hero Section with Gradient -->
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2c2c2c;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect y="80" width="1200" height="400" fill="url(#heroGrad)"/>
+
+  <!-- Hero Text -->
+  <text x="600" y="250" font-family="Georgia, serif" font-size="56" fill="#ffffff" font-weight="bold" text-anchor="middle">Bienvenue</text>
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="24" fill="#f8f8f8" text-anchor="middle">Cuisine Raffinée &amp; Service Exceptionnel</text>
+
+  <!-- Button -->
+  <rect x="500" y="340" width="200" height="50" rx="4" fill="#d4af37"/>
+  <text x="600" y="372" font-family="Arial, sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold" text-anchor="middle">VOIR LE MENU</text>
+
+  <!-- Content Cards -->
+  <rect x="50" y="530" width="340" height="320" rx="8" fill="#1a1a1a"/>
+  <rect x="50" y="530" width="340" height="180" fill="#3a3a3a"/>
+  <text x="220" y="650" font-family="Georgia, serif" font-size="24" fill="#d4af37" text-anchor="middle">Notre Menu</text>
+  <text x="220" y="690" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Découvrez nos plats</text>
+  <text x="220" y="710" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">signature</text>
+
+  <rect x="430" y="530" width="340" height="320" rx="8" fill="#1a1a1a"/>
+  <rect x="430" y="530" width="340" height="180" fill="#3a3a3a"/>
+  <text x="600" y="650" font-family="Georgia, serif" font-size="24" fill="#d4af37" text-anchor="middle">Réservations</text>
+  <text x="600" y="690" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Réservez votre table</text>
+  <text x="600" y="710" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">en ligne</text>
+
+  <rect x="810" y="530" width="340" height="320" rx="8" fill="#1a1a1a"/>
+  <rect x="810" y="530" width="340" height="180" fill="#3a3a3a"/>
+  <text x="980" y="650" font-family="Georgia, serif" font-size="24" fill="#d4af37" text-anchor="middle">Événements</text>
+  <text x="980" y="690" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Organisez vos</text>
+  <text x="980" y="710" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">événements privés</text>
+</svg>

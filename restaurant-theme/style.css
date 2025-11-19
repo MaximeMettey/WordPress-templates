@@ -122,6 +122,7 @@ a:hover {
 
 /* Hero Section */
 .hero-section {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #2c2c2c 100%);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -251,6 +252,7 @@ a:hover {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
 }
 
 .card-content {
@@ -400,4 +402,112 @@ a:hover {
     height: 1px;
     width: 1px;
     overflow: hidden;
+}
+
+/* Site Main Content */
+.site-main {
+    min-height: 60vh;
+}
+
+/* Content Wrapper */
+.site-content {
+    padding: 2rem 0;
+}
+
+/* Post/Page Content Styles */
+.entry-content {
+    padding: 2rem 0;
+    line-height: 1.8;
+}
+
+.entry-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .menu-item {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Enhanced Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Site Description */
+.site-description {
+    color: var(--light-bg);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Responsive Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-toggle-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-toggle-icon span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation ul {
+        display: none;
+    }
+
+    .main-navigation.toggled ul {
+        display: flex;
+    }
 }

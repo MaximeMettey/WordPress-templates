@@ -72,21 +72,21 @@
         $hero_image = get_theme_mod( 'hero_background_image' );
         $hero_title = get_theme_mod( 'hero_title', get_bloginfo( 'name' ) );
         $hero_subtitle = get_theme_mod( 'hero_subtitle', get_bloginfo( 'description' ) );
-        $hero_button_text = get_theme_mod( 'hero_button_text', __( 'View Our Menu', 'restaurant-premium' ) );
+        $hero_button_text = get_theme_mod( 'hero_button_text', __( 'Découvrir Notre Menu', 'restaurant-premium' ) );
         $hero_button_link = get_theme_mod( 'hero_button_link', '#menu' );
 
-        if ( $hero_image || $hero_title || $hero_subtitle ) :
+        // Set defaults if empty
+        if ( empty( $hero_title ) ) {
+            $hero_title = __( 'Bienvenue dans Notre Restaurant', 'restaurant-premium' );
+        }
+        if ( empty( $hero_subtitle ) ) {
+            $hero_subtitle = __( 'Une Cuisine Raffinée et un Service d\'Exception', 'restaurant-premium' );
+        }
         ?>
         <section class="hero-section" style="<?php echo $hero_image ? 'background-image: url(' . esc_url( $hero_image ) . ');' : ''; ?>">
             <div class="hero-content">
-                <?php if ( $hero_title ) : ?>
-                    <h1 class="hero-title"><?php echo esc_html( $hero_title ); ?></h1>
-                <?php endif; ?>
-
-                <?php if ( $hero_subtitle ) : ?>
-                    <p class="hero-subtitle"><?php echo esc_html( $hero_subtitle ); ?></p>
-                <?php endif; ?>
-
+                <h1 class="hero-title"><?php echo esc_html( $hero_title ); ?></h1>
+                <p class="hero-subtitle"><?php echo esc_html( $hero_subtitle ); ?></p>
                 <?php if ( $hero_button_text ) : ?>
                     <a href="<?php echo esc_url( $hero_button_link ); ?>" class="btn btn-primary">
                         <?php echo esc_html( $hero_button_text ); ?>
@@ -95,6 +95,5 @@
             </div>
         </section>
         <?php
-        endif;
     endif;
     ?>
